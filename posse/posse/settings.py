@@ -25,7 +25,7 @@ SECRET_KEY = '3e0ba5e#m5p4#7y)owhkzkgim13$b2o!@3=sk57jbigtn80dhh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['odm.btucson.com', 'outlawdirtymoney.com']
+ALLOWED_HOSTS = ['odm.btucson.com', 'outlawdirtymoney.com', 'headlinescore.com']
 
 
 # Application definition
