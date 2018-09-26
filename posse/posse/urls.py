@@ -19,4 +19,17 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('odm/admin/', admin.site.urls),
+
+    path('ads/', views.AdListView.as_view(), name='ads'),
+    path('odm/ads/', views.AdListView.as_view(), name='odm_ads'),
+
+    path('orgs/', views.OrgListView.as_view(), name='orgs'),
+    path('odm/orgs/', views.OrgListView.as_view(), name='odm_orgs'),
+
+    path('ad/<int:pk>', views.AdDetailView.as_view(), name='ad'),
+    path('odm/ad/<int:pk>', views.AdDetailView.as_view(), name='odm_ad'),
+
+    path('org/<int:pk>', views.OrgDetailView.as_view(), name='org'),
+    path('odm/org/<int:pk>', views.OrgDetailView.as_view(), name='odm_org'),
+
 ]
