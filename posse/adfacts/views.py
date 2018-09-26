@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.views import generic
 
+from adfacts.models import Org, Ad
+
 # Create your views here.
 
 class OrgListView(generic.ListView):

@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Dirty Money Ads Seen In Arizona</h1>
+  <ul>
+    {% for ad in ad_list %}
+       <li><a href="/adfacts/ad/{{ ad.id }}">{{ ad.title }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %} 

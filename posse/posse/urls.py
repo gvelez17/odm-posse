@@ -16,20 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from adfacts import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('odm/admin/', admin.site.urls),
 
-    path('ads/', views.AdListView.as_view(), name='ads'),
-    path('odm/ads/', views.AdListView.as_view(), name='odm_ads'),
+    path('adfacts/ads/', views.AdListView.as_view(), name='ads'),
+    path('odm/adfacts/ads/', views.AdListView.as_view(), name='odm_ads'),
 
-    path('orgs/', views.OrgListView.as_view(), name='orgs'),
-    path('odm/orgs/', views.OrgListView.as_view(), name='odm_orgs'),
+    path('adfacts/orgs/', views.OrgListView.as_view(), name='orgs'),
+    path('odm/adfacts/orgs/', views.OrgListView.as_view(), name='odm_orgs'),
 
-    path('ad/<int:pk>', views.AdDetailView.as_view(), name='ad'),
+    path('adfacts/ad/<int:pk>', views.AdDetailView.as_view(), name='ad'),
     path('odm/ad/<int:pk>', views.AdDetailView.as_view(), name='odm_ad'),
 
-    path('org/<int:pk>', views.OrgDetailView.as_view(), name='org'),
+    path('adfacts/org/<int:pk>', views.OrgDetailView.as_view(), name='org'),
     path('odm/org/<int:pk>', views.OrgDetailView.as_view(), name='odm_org'),
 
 ]
