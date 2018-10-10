@@ -6,4 +6,13 @@
 {{ form.as_p }}
 <button class="btn btn-success" type="submit">Find Ads</button>
 </form>
+
+<h2>{{ results_header }}</h2>
+<table border=2 cellspacing=0 cellpadding=3>
+<tr><th>Ad Copy</th><th>Paid for by</th><th>What do we know about them?</th></tr>
+{% for ad in results %}
+<tr><td>"{{ ad.title }}"</td><td> {{ ad.paid_by.name }} </td><td>{{ ad.paid_by.notes }}</td></tr>
+{% endfor %}
+</table>
+
 {% endblock %}
