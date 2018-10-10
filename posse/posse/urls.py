@@ -22,6 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('odm/admin/', admin.site.urls),
 
+    path('search/', views.search, name='search'),
+
     path('adfacts/ads/', views.AdListView.as_view(), name='ads'),
     path('odm/adfacts/ads/', views.AdListView.as_view(), name='odm_ads'),
 
